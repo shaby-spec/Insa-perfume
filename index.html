@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Perfume Shop</title>
+  <style>
+    /* Reset & base */
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background: #f8f4f9;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Navigation */
+    nav {
+      background: #7b4397; /* purple gradient start */
+      background: linear-gradient(135deg, #7b4397 0%, #dc2430 100%);
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #fff;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    nav .logo {
+      font-size: 1.7rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      cursor: default;
+      user-select: none;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+      margin: 0;
+      padding: 0;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+    nav ul li a:hover {
+      color: #ffe3e3;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1470&q=80') center/cover no-repeat;
+      height: 400px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      text-shadow: 1px 1px 10px rgba(0,0,0,0.7);
+      font-size: 3rem;
+      font-weight: 700;
+      letter-spacing: 3px;
+    }
+
+    /* Main content container */
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    /* Perfume grid */
+    .perfume-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+    }
+
+    .perfume-card {
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      cursor: pointer;
+    }
+    .perfume-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 16px 30px rgba(0,0,0,0.15);
+    }
+
+    .perfume-card img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .perfume-info {
+      padding: 15px 20px;
+      text-align: center;
+    }
+    .perfume-name {
+      font-weight: 700;
+      font-size: 1.25rem;
+      margin: 10px 0 8px;
+      color: #7b4397;
+    }
+    .perfume-desc {
+      font-size: 0.95rem;
+      color: #555;
+    }
+
+    /* Footer */
+    footer {
+      background: #7b4397;
+      color: #fff;
+      text-align: center;
+      padding: 25px 10px;
+      margin-top: 50px;
+      font-size: 0.9rem;
+    }
+
+    /* Responsive text size for hero */
+    @media (max-width: 600px) {
+      .hero {
+        font-size: 2rem;
+        padding: 0 10px;
+        height: 300px;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo">Perfume Shop</div>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#perfumes">Perfumes</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero" id="home">
+    Discover Your Scent
+  </section>
+
+  <section class="container" id="perfumes">
+    <h2 style="text-align:center; color:#7b4397; margin-bottom: 30px;">Our Perfumes</h2>
+    <div class="perfume-grid">
+
+      <div class="perfume-card">
+        <img src="https://images.unsplash.com/photo-1562036363-f9a44b2a5737?auto=format&fit=crop&w=400&q=80" alt="Rose Blossom" />
+        <div class="perfume-info">
+          <div class="perfume-name">Rose Blossom</div>
+          <div class="perfume-desc">A fresh and floral scent with notes of rose and jasmine.</div>
+        </div>
+      </div>
+
+      <div class="perfume-card">
+        <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=400&q=80" alt="Mystic Oud" />
+        <div class="perfume-info">
+          <div class="perfume-name">Mystic Oud</div>
+          <div class="perfume-desc">Warm and mysterious with rich oud and amber undertones.</div>
+        </div>
+      </div>
+
+      <div class="perfume-card">
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Citrus Breeze" />
+        <div class="perfume-info">
+          <div class="perfume-name">Citrus Breeze</div>
+          <div class="perfume-desc">Energizing blend of lemon, orange, and grapefruit notes.</div>
+        </div>
+      </div>
+
+      <div class="perfume-card">
+        <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=400&q=80" alt="Vanilla Dream" />
+        <div class="perfume-info">
+          <div class="perfume-name">Vanilla Dream</div>
+          <div class="perfume-desc">Sweet and comforting vanilla with a hint of musk.</div>
+        </div>
+      </div>
+
+      <div class="perfume-card">
+        <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=400&q=80" alt="Ocean Mist" />
+        <div class="perfume-info">
+          <div class="perfume-name">Ocean Mist</div>
+          <div class="perfume-desc">Refreshing marine scent evoking sea breeze and salt air.</div>
+        </div>
+      </div>
+
+      <div class="perfume-card">
+        <img src="https://images.unsplash.com/photo-1478145046317-39f10e56b5e9?auto=format&fit=crop&w=400&q=80" alt="Lavender Fields" />
+        <div class="perfume-info">
+          <div class="perfume-name">Lavender Fields</div>
+          <div class="perfume-desc">Relaxing lavender with hints of herbal and floral notes.</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer id="contact">
+    Contact us: <a href="mailto:info@perfumeshop.com" style="color:#ffe3e3;">info@perfumeshop.com</a> | Phone: +1 (555) 123-4567
+  </footer>
+
+</body>
+</html>
